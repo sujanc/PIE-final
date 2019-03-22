@@ -1,0 +1,63 @@
+<mat-dialog-content>
+  <section class="mat-body-strong" *ngIf="dataIsLoaded == false">
+    There are no pending tasks. Click "Add a new task" to add tasks.
+  </section>
+  <table mat-table [dataSource]="dataSource" *ngIf="dataIsLoaded == true">
+    <ng-container matColumnDef="taskName">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let row"
+        [ngClass]="row.taskStatus == true?'mat-cell-completed':'mat-cell-not-completed'"> {{row.taskName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="taskDescription">
+      <th mat-header-cell *matHeaderCellDef> Description</th>
+      <td mat-cell *matCellDef="let row"
+        [ngClass]="row.taskStatus == true?'mat-cell-completed':'mat-cell-not-completed'"> {{row.taskDescription}} </td>
+    </ng-container>
+    <ng-container matColumnDef="taskStatus">
+      <th mat-header-cell *matHeaderCellDef> Status</th>
+      <td mat-cell *matCellDef="let row"
+        [ngClass]="row.taskStatus == true?'mat-cell-completed':'mat-cell-not-completed'">
+        <ng-container *ngIf="row.taskStatus == true">
+          Complete
+        </ng-container>
+        <ng-container *ngIf="row.taskStatus == false">
+          Not Complete
+        </ng-container>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="dueDate">
+      <th mat-header-cell *matHeaderCellDef> Due Date</th>
+      <td mat-cell *matCellDef="let row"
+        [ngClass]="row.taskStatus == true?'mat-cell-completed':'mat-cell-not-completed'"> {{row.dueDate}} </td>
+    </ng-container>
+    <ng-container matColumnDef="modifyStatusButton">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let row">
+        <ng-container *ngIf="!row.taskStatus">
+          <button mat-raised-button (click)="modifyStatusOfTask(row.taskStatus, row.taskName)">Mark as
+            Complete</button>
+        </ng-container>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+      [ngClass]="(row.taskStatus == true)?'no-highlight':'red-highlight'"></tr>
+  </table>
+  <div *ngIf="
+          addANewPendingTaskIsClicked == true
+        ">
+    <input placeholder="Task Name" [(ngModel)]="newPendingTaskName" />
+    <input placeholder="Task Description" [(ngModel)]="newPendingTaskDescription" />
+    <input placeholder="Due Date" [(ngModel)]="newPendingTaskDueDate" />
+    <button mat-raised-button (click)="saveNewPendingTask()">Save</button>
+  </div>
+</mat-dialog-content>
+<div mat-dialog-actions classAlign="space-around center">
+      <button mat-raised-button (click)="addANewPendingTask()">
+        Add a new task
+      </button>
+      <button mat-raised-button (click)="sendAReminder()">Send a reminder</button>
+      <button mat-raised-button mat-dialog-close class="clear-for-porting" (click)="clearForPorting()">Clear For
+        Porting</button>
+      <button mat-raised-button mat-dialog-close md-raised-button>Close</button>
+</div>

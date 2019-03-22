@@ -1,0 +1,37 @@
+.row{
+    margin-right: 0%;
+    margin-left:0%;
+}
+
+.container{
+    background: url('/../assets/img/dark.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+
+}
+ /* mat-card-content {
+     width: 45%;
+ } */
+
+
+@media  (max-width: 768px) {
+    .panel-body .card-img-top {
+       width: 180px;
+     }
+   }
+
+   .card-img-top {
+    width:260px; 
+    height: 174px;
+   }
+
+   @media (max-width: 1024px) and (min-width: 768px){
+    .panel-body .card-img-top {
+
+    width: 180px;
+     }
+   }

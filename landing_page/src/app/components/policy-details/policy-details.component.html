@@ -1,0 +1,130 @@
+<div class="xyz">
+<section id="cover">
+  <div id="cover-caption">
+    <div class="container">
+      <div class="col-sm-12 col-sm-offset-1">
+        <!-- <h1>Company name: {{ policyDetails.insurerName }}</h1>
+        <h2>Policy name: {{ policyDetails.policyName }}</h2> -->
+      </div>
+    </div>
+  </div>
+</section>
+<mat-tab-group classs ="tabbed-pane" style="margin-bottom: 10%;" mat-align-tabs="center">
+<mat-tab label="Policy Description" >
+  
+  
+    <div class="abc">
+    <div class="col-md-12 content-area" >
+        <div class="inner-content">
+          <br><br>
+            <p class="inner-content-para">{{policyDetails.policyDescription}}</p>
+          <div class="row display-flex">
+              <div class="col-md-6 innermost-content " > 
+          <p class="sub-title-txt">Key Features :</p>
+          <ul>
+             <li>No capping on room rent - Treatment at Single Standard A/C room</li>
+             <li>Automatic restoration of entire Sum insured by 100%.</li>
+             <li>Cover for over 400 day care procedures.</li>
+             <li>Cost of health check up for every block of 3 claim free years</li>
+             <li>Hospital cash benefit.</li>
+             <li> Cashless hospitals:
+             <div *ngFor = "let hospital of policyDetails.cashlessHospitals">
+                <li  style="margin-left:5%;">{{hospital}}</li>
+               </div>
+             </li>
+           </ul>
+           </div>
+           <div class="col-md-6 innermost-content"> 
+
+           <p class="sub-title-txt">Advantages: </p>
+           <ul> 
+             <li>Affordable Health Insurance cover on a floater basis</li>
+             <li>Cost of health check up for every block of 3 claim free years</li>
+             <li>Upto 100% Increase in Sum Insured upon a claim free renewal</li>
+             <li>Policy Tenure : {{policyDetails.policyTerm}} years</li>
+             <li>Waiting period : {{policyDetails.waitingPeriod}}</li>
+             <li> Diseases covered :          
+                 <div *ngFor = "let disease of policyDetails.diseasesCovered">
+                <li style="margin-left:5%;">  {{disease}} </li> 
+             </div>
+             </li>
+            </ul>
+           </div>
+         
+        </div>
+    </div>
+    </div>
+  </div>
+</mat-tab>
+<mat-tab label="Terms and conditions">
+    <div class="xyz" >
+
+  <h3>
+    General <span class="noboldtxt">Terms</span>
+  </h3> 
+  <p>This policy is on floater basis.<br>
+  Family : Proposer, spouse, dependent children from 16 days up to 25 years (those who are economically dependent on their parents)</p>
+  <p>&nbsp;</p>
+  <h3>
+      <span class="noboldtxt">
+    Benefits
+  </span>
+  </h3>
+  
+  <p>  Amount paid by any mode other than by cash for  this insurance is eligible for relief under Section 80D of the Income Tax Act.</p>
+  <p>&nbsp;</p>
+
+ <h3>
+      <span class="noboldtxt">
+    Free Look Period
+  </span>
+  </h3>
+  
+  <p>  A free look period of 15 days from the date of  receipt of the policy is available for reviewing the policy terms and  conditions. In case insured is not satisfied he can seek cancellation of the  policy and in such event the Company will allow refund of premium after  adjusting the cost of pre- acceptance of medical screening, stamp duty charges  and proportionate risk premium for the period concerned provided no claim has  been made until such cancellation. Free look&nbsp;cancellation is not  applicable at the time of renewal.</p>
+  <p>&nbsp;</p>
+
+  <h3>
+      <span class="noboldtxt">
+          Guaranteed Lifetime Renewals
+  </span>
+  </h3>
+  
+  <p>Life-long  renewals beyond 65 years are offered under this policy.</p>
+  <p>&nbsp;</p>
+
+  <h3>
+      <span class="noboldtxt">
+          Co-Payment:
+  </span>
+  </h3>
+ <p>20% of each and every claim for persons above 60 years at entry level and their subsequent renewals.</p>
+  <p>&nbsp;</p>
+  <h3>
+      <span class="noboldtxt">
+          Pre-Acceptance Medical Screening:
+  </span>
+  </h3>
+
+  <p>Persons above 50 years will be required to undergo pre-acceptance medical screening at the Company nominated centres. Cost of screening is currently borne by the company.</p>
+  <p>&nbsp;</p>
+
+  <h3>
+      <span class="noboldtxt">
+          Pre-Existing Diseases/Illness: :
+  </span>
+  </h3>
+  <p> Are covered after 48 months of continuous Insurance without break with any Indian Insurance Company.</p>
+  <p>&nbsp;</p>
+
+  <h3>
+      <span class="noboldtxt">
+Note:  </span>
+  </h3>
+  <p> Renewal  premium, terms and conditions are subject to change with prior approval from IRDAI.</p>
+    </div>
+</mat-tab>
+
+
+
+</mat-tab-group>
+</div>

@@ -1,0 +1,31 @@
+
+ .container{
+  background: url('/../assets/img/backgroundreg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+
+}
+
+
+
+@media  (max-width: 768px) {
+  .panel-body .card-img-top {
+     width: 180px;
+   }
+ }
+
+ .card-img-top {
+   width:280px;
+   height: 200px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+   .panel-body .card-img-top {
+
+   width: 180px;
+    }
+  }

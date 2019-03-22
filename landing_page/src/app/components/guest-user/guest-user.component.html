@@ -1,0 +1,55 @@
+<!-- <form [formGroup]="guestUser">
+  <mat-form-field  style = "margin-left: 28%;">
+  <input  matInput placeholder="Email" [(ngModel)] ="email" formControlName="email" required/>
+</mat-form-field>
+<mat-form-field  style = "margin-left: 28%;">
+  <input matInput placeholder="Phone number" formControlName="phone" required/>
+</mat-form-field>
+<br>
+
+<div style = "margin-left: 50%; margin-bottom:20%;">
+    <button class="btn btn-success btn-outline-rounded" (click)="submitForm(email)"> Submit <span style="margin-left:10px;"></span></button>
+</div>
+</form> -->
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Login</strong>
+                </div>
+                <div class="panel-body">
+                    <form [formGroup]="guestUser">
+                       <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">
+                            Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="email" style="font-size:15px" placeholder="Email" [(ngModel)]="email" formControlName="email"
+                            required="required">
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">
+                           Contact</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control"  name="phone" style="font-size:15px" placeholder=" Phone number" [(ngModel)]="phone" formControlName="phone"  required minlength="10">
+                        </div>
+                    </div> -->
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9" style="margin-top:12px;">
+                            <button type="submit" class="btn btn-primary btn-sm" (click)="submitForm(email)">
+                                Submit</button>
+                                 <button type="reset" class="btn btn-default btn-sm">
+                                Reset</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>

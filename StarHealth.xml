@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+
+    <policy policyId="16">
+
+        <insurerName>StarHealth</insurerName>
+        <insurerLicense>StarHealthLicense</insurerLicense>
+        <policyName>StarHealth Plan-1</policyName>
+        <minAge>30</minAge>
+        <maxAge>68</maxAge>
+        <policyType>Family</policyType>
+        <genderAvail>Male</genderAvail>
+        <waitingPeriod>2</waitingPeriod>
+        <policyTerm>8</policyTerm>
+        <minSumInsured>150000</minSumInsured>
+        <maxSumInsured>2500000</maxSumInsured>
+        <policyDescription>Get Health coverage for Self by availing Insured amount up to Rs.2500000</policyDescription>
+
+    </policy>
+
+    <policy policyid="93">
+
+        <insurerName>StarHealth</insurerName>
+        <insurerLicense>StarHealthLicense</insurerLicense>
+        <policyName>StarHealth Plan-2</policyName>
+        <minAge>40</minAge>
+        <maxAge>85</maxAge>
+        <policyType>Self</policyType>
+        <genderAvail>Female</genderAvail>
+        <waitingPeriod>6</waitingPeriod>
+        <policyTerm>3</policyTerm>
+        <minSumInsured>500000</minSumInsured>
+        <maxSumInsured>2000000</maxSumInsured>
+        <policyDescription>Get Health coverage for Family by availing Insured amount up to Rs.2000000</policyDescription>
+
+    </policy>
+
+    <policy policyid="78">
+
+        <insurerName>StarHealth</insurerName>
+        <insurerLicense>StarHealthLicense</insurerLicense>
+        <policyName>StarHealth Plan-3</policyName>
+        <minAge>25</minAge>
+        <maxAge>70</maxAge>
+        <policyType>Group</policyType>
+        <genderAvail>Male</genderAvail>
+        <waitingPeriod>6</waitingPeriod>
+        <policyTerm>5</policyTerm>
+        <minSumInsured>800000</minSumInsured>
+        <maxSumInsured>3500000</maxSumInsured>
+        <policyDescription>Get Health coverage for Group by availing Insured amount up to Rs.3500000</policyDescription>
+
+    </policy>
+
+    <policy policyid="35">
+
+        <insurerName>StarHealth</insurerName>
+        <insurerLicense>StarHealthLicense</insurerLicense>
+        <policyName>StarHealth Plan-4</policyName>
+        <minAge>35</minAge>
+        <maxAge>78</maxAge>
+        <policyType>Self</policyType>
+        <genderAvail>Male</genderAvail>
+        <waitingPeriod>3</waitingPeriod>
+        <policyTerm>4</policyTerm>
+        <minSumInsured>250000</minSumInsured>
+        <maxSumInsured>1500000</maxSumInsured>
+        <policyDescription>Get Health coverage for Self by availing Insured amount up to Rs.1500000</policyDescription>
+    </policy>
+
+</catalog>

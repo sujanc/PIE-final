@@ -1,0 +1,9 @@
+td {
+    border: 1px solid black;
+}
+.marked-complete-text {
+    color: greenyellow;
+}
+.marked-not-complete-text {
+    color: red;
+}

@@ -1,0 +1,102 @@
+<div class="xyz">
+<mat-tab-group style="margin-left: 0%;" mat-align-tabs="center">
+  <mat-tab label="Enter Your Name">
+
+    <form [formGroup]="firstForm">
+      <mat-form-field style="margin-left: 30%;">
+        <input
+          matInput
+          placeholder="Username"
+          formControlName="username"
+          required
+        >
+        <mat-error *ngIf="isFieldInvalid('username')">
+             User name is required
+        </mat-error> 
+      </mat-form-field>
+      <br />
+      <mat-form-field style="margin-left: 30%;">
+        <input matInput placeholder="Email" formControlName="email" required />
+        <mat-error *ngIf="isFieldInvalid('email')">
+            Email is required
+       </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field style="margin-left: 30%;">
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          required
+        />
+        <mat-error *ngIf="isFieldInvalid('password')">
+           Password must be atleast 6 character long
+       </mat-error>
+      </mat-form-field>
+    </form>
+  </mat-tab>
+  <mat-tab label="Fill out other details">
+    <form [formGroup]="secondForm">
+      <mat-form-field style="margin-left: 35%;">
+        <input
+          matInput
+          placeholder="Full Name"
+          formControlName="fullName"
+          required
+        />
+        <mat-error *ngIf="isFieldInvalid('username')">
+            Name is required
+       </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field style="margin-left: 35%;">
+        <input matInput placeholder="age" formControlName="age" required />
+        <mat-error *ngIf="isFieldInvalid('username')">
+            Age is required
+       </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field style="margin-left: 35%;">
+        <mat-select placeholder="Gender" formControlName="gender">
+          <mat-option value="Male">male</mat-option>
+          <mat-option value="Female">female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <mat-form-field style="margin-left: 35%;">
+        <mat-select placeholder="Security Question">
+          <mat-option value="option">What is your favourite food?</mat-option>
+          <mat-option value="option">What is your favourite pet?</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <mat-form-field style="margin-left: 35%;">
+        <input
+          matInput
+          placeholder="Security Answer"
+          formControlName="securityAnswer"
+        />
+        <mat-error *ngIf="isFieldInvalid('username')">
+            Security Answer is required
+       </mat-error>
+      </mat-form-field>
+    </form>
+    <div style="margin-left: 35%; margin-bottom: 20%;">
+      <button
+        class="btn btn-success btn-outline-rounded"
+        (click)="submitForm()"
+      >
+        Submit
+        <span
+          style="margin-left:10px;"
+          class="glyphicon glyphicon-arrow-right"
+        ></span>
+      </button>
+    </div>
+  </mat-tab>
+ </mat-tab-group>
+</div>
+ <!-- <app-footer></app-footer>
+ <router-outlet></router-outlet> -->
+ 

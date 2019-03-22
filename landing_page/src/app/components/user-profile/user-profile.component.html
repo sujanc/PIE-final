@@ -1,0 +1,92 @@
+<!-- <div style="margin-left:30%;">
+
+  <ul style="list-style: none">
+    <li>Insured Name : {{ profile.username}}</li>
+    <li>Email : {{ profile.email }}</li>
+    <li>Age : {{profile.age}}</li>
+    <li>Gender : {{profile.gender}}</li>
+    <li>Full Name : {{ profile.fullName}}</li>
+    <li>Family Members :
+      <div *ngFor = "let count of profile.familyMembers">
+        <li>Member Name : {{count.memberName}}</li>
+        <li>Member Age: {{count.memberAge}}</li>
+        <li>Member Gender : {{count.memberGender}}</li>
+        <li>Relation : {{relation}}}</li>
+      </div>
+    </li>
+    <a [routerLink]="['/updateProfile', profile.username]" class="btn btn-primary">Update</a>
+  </ul>
+</div> -->
+
+<!-- <mat-card-header >
+  <p style="margin-left: 20%;margin-top: 5%;">My Profile</p>
+    </mat-card-header>
+    <mat-card-content>
+      <ul style="list-style: none">
+        <li>Insured Name : {{ profile.username}}</li>
+        <li>Email : {{ profile.email }}</li>
+        <li>Age : {{profile.age}}</li>
+        <li>Gender : {{profile.gender}}</li>
+        <li>Full Name : {{ profile.fullName}}</li>
+        <li>Family Members :
+          <div *ngFor = "let count of profile.familyMembers">
+            <li>Member Name : {{count.memberName}}</li>
+            <li>Member Age: {{count.memberAge}}</li>
+            <li>Member Gender : {{count.memberGender}}</li>
+            <li>Relation : {{relation}}}</li>
+          </div>
+        </li>
+      </ul>
+                
+          <mat-card-footer>
+            <a [routerLink]="['/updateProfile', profile.username]" class="btn btn-primary" style ="margin-right: 5%;margin-left: 20%; margin-bottom: 2%;">Update</a>
+          </mat-card-footer> -->
+        
+    <!-- </mat-card-content> -->
+    <div *ngIf = info.token>
+      <div class="xyz">
+      <br><br>
+    <label style="margin-left: 5%;">Insured Name :</label><br>
+      <input type="text" placeholder="Insured Name" style="font-size:15px;"  value="{{profile.username}}" required/><br><br>
+      <label style="margin-left: 5%;">Email :</label><br>
+      <input type="text" placeholder="Insured Name" style="font-size:15px;"  value="{{profile.email}}" required/><br><br>
+      <label style="margin-left: 5%;">Age :</label><br>
+      <input type="text" placeholder="Insured Name" style="font-size:15px;"  value="{{profile.age}}" required/><br><br>
+      <label style="margin-left: 5%;">Gender :</label><br>
+      <input type="text" placeholder="Insured Name" style="font-size:15px;"  value="{{profile.gender}}" required/><br><br>
+      <label style="margin-left: 5%;">Existing Diseases :</label><br>
+      <input type="text" placeholder="Insured Name" style="font-size:15px;"  value="{{profile.existingDisease}}" required/>
+      <a [routerLink]="['/updateProfile', profile.username]" class="btn btn-primary" style ="margin-right: 5%;margin-left: 40%; margin-bottom: 2%; font-size: 15px;">Update</a>
+    </div>
+    </div>
+     <!-- <select placeholder="Existing Policy Name" style="font-size:15px;" [(ngModel)]="insurerProd"(change) = "reach(insurerProd)"> 
+         <option *ngFor="let policyy of policies" value="{{policyy.policyName}}">{{policyy.policyName}}</option>
+      </select> 
+     
+      <div *ngIf = "flag" style="font-size:15px;">
+          <input type="text" placeholder="Existing insurer" [(ngModel)] = "anusha.insurerName" readonly required/>
+          <input type="text" placeholder="Existing sum insured"  [(ngModel)] = "anusha.maxSumInsured" readonly required/>
+          <input type="text" placeholder="Existing PolicyNumber" [(ngModel)] = "anusha.policyId" readonly required/>
+      </div>
+      <input type="text" style="font-size:15px;" placeholder="Add-Ons" [(ngModel)] = "addon" required/><br><br>
+     
+      <label style="margin-left: 5%;">New Policy name:</label><br>
+      <select placeholder="New Policy Name" style="font-size:15px;" [(ngModel)] = "newInsurerProd" (change) = "reach1(newInsurerProd)">
+             <option *ngFor="let policyy1 of newpolicies" value="{{policyy1.policyName}}">{{policyy1.policyName}}</option>
+      </select>
+     <div *ngIf="flag1" style="font-size:15px;">
+             <input type="text" placeholder="New Insurer" [(ngModel)] = "policy1.insurerName" readonly required/>
+             <input type="text" placeholder="New Sum insured"  [(ngModel)] = "policy1.maxSumInsured" readonly required/>
+             <input type="text" placeholder="New PolicyNumber" [(ngModel)] = "policy1.policyId" readonly required/>
+     </div>
+     <input type="text" placeholder="Reason for portability" style="font-size:15px;" [(ngModel)] = "reason" required/>
+      <input type="text" placeholder="No of family members" style="font-size:15px;"[(ngModel)] = "familyMem" required/>
+      <label style="margin-left: 5%; font-size:15px;">Is PED exclusion period longer than the existing policy period?(true/false)</label>
+      <input type="text" style="font-size:15px;" [(ngModel)] = "exclusion" required/><br><br>
+      
+      <div style = "margin-left: 50%; margin-bottom:20%;">
+          <button class="btn btn-success btn-outline-rounded" style="font-size:15px;" (click)="submitForm(insuredName,insurerProd,anusha.insurerName,anusha.maxSumInsured,addon,anusha.policyId,newInsurerProd,policy1.insurerName,policy1.maxSumInsured,reason,familyMem,exclusion)"> Submit <span style="margin-left:10px;"></span></button>
+      </div>
+      
+     </div> -->
+     

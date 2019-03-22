@@ -1,0 +1,143 @@
+<!-- <div class="mypolicy">
+  <div *ngFor="let request of requests">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Request ID</th>
+          <th>User Name</th>
+          <th>Old Insurer Name</th> -->
+          <!-- <th>Sum Insured</th> -->
+
+          <!-- <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img class="img-thumbnail img-responsive" alt="image" src="./../../assets/img/user.jpeg" alt="Logo"
+              class="img-responsive" style="width: 50px; height: 50px;" /></td>
+          <td>{{ request.portingRequestId }}</td>
+          <td>{{ request.insuredName }}</td>
+          <td>{{ request.insurerName }}</td>
+          <button class="btn btn-primary" (click)="openDialog(request.insuredName)"
+            style="position: relative; right: 0;margin-top: 0px;">Review</button> -->
+          <!-- <button mat-raised-button (click)="openDialog(request.insuredName)" style="position: relative; right: 0;margin-top: 0px;">Review</button> -->
+          <!-- <button class="btn btn-primary" (click)="port(request)">Accept Porting</button>
+
+          <button class="btn btn-primary" (click)='raiseGrievanceButtonClicked(request.portingRequestId)'>Raise
+            Grievence</button> -->
+          <!-- <app-display-all-porting-requests *ngIf="raiseGrievanceButtonIsClicked"
+            [portingRequestId]="request.portingRequestId">
+          </app-display-all-porting-requests> -->
+          <!-- <td>20000</td>  -->
+          <!-- <td> 
+              <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" ng-click="editRecord(row.id)"><i class="glyphicon glyphicon-pencil">
+                  </i></button>
+                <button type="button" class="btn btn-danger" ng-click="deletRecord(row.id)"><i class="glyphicon glyphicon-trash">
+                  </i></button>
+              </div>
+            </td> -->
+        <!-- </tr> -->
+        <!-- <tr>
+            <td>Dave</td>
+            <td>ICICI Lombard</td>
+            <td>50000</td> 
+           <td>
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default" ng-click="editRecord(row.id)"><i class="glyphicon glyphicon-pencil">
+                    </i></button>
+                  <button type="button" class="btn btn-danger" ng-click="deletRecord(row.id)"><i class="glyphicon glyphicon-trash">
+                    </i></button>
+                </div>
+              </td>
+          </tr>
+          <tr> 
+             <td><img class="img-thumbnail img-responsive" alt="image" src="./../../assets/img/user.jpeg" alt="Logo" class = "img-responsive" style="width: 50px; height: 50px;"/></td>
+              <td>Max Bupa Heart Attack</td>
+              <td>Deepak</td>
+              <td>Apollo Munich</td>
+              <td>150000</td> 
+                 <td>
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" class="btn btn-default" ng-click="editRecord(row.id)"><i class="glyphicon glyphicon-pencil">
+                        </i></button>
+                      <button type="button" class="btn btn-danger" ng-click="deletRecord(row.id)"><i class="glyphicon glyphicon-trash">
+                        </i></button>
+                    </div>
+                  </td> 
+             </tr>
+            <tr>
+                <td><img class="img-thumbnail img-responsive" alt="image" src="./../../assets/img/user.jpeg" alt="Logo" class = "img-responsive" style="width: 50px; height: 50px;"/></td>
+                <td>Max Bupa AIDS</td>
+                <td>Achintya</td>
+                <td>Star Health</td>
+               <td>100000</td> 
+                  <td>
+                      <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" ng-click="editRecord(row.id)"><i class="glyphicon glyphicon-pencil">
+                          </i></button>
+                        <button type="button" class="btn btn-danger" ng-click="deletRecord(row.id)"><i class="glyphicon glyphicon-trash">
+                          </i></button>
+                      </div>
+                    </td>
+              </tr>  -->
+<!-- 
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5" class="text-center">
+            <div st-pagination="" st-items-by-page="itemsByPage"></div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<app-side-bar></app-side-bar> -->
+
+
+
+
+<div *ngIf = info.token>
+
+<table mat-table [dataSource]="requests" matSort>
+  <ng-container matColumnDef="requestID">
+    <th mat-header-cell *matHeaderCellDef> Request ID</th>
+    <td mat-cell *matCellDef="let row"> {{row.portingRequestId}} </td>
+  </ng-container>
+  <ng-container matColumnDef="userName">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let row"> {{row.insuredName}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="oldInsurerName">
+    <th mat-header-cell *matHeaderCellDef> New insurer Name </th>
+    <td mat-cell *matCellDef="let row">
+      {{row.newInsurerName}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="modifyStatusButton">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let row">
+     
+        <button mat-stroked-button (click)="openDialog(row.insuredName)">Review</button>
+        <br><br>
+        <button mat-stroked-button *ngIf="isClearedRequest(row.portingRequestId) == true" (click)="port(row)">Accept</button>
+        <br><br>
+        <button mat-stroked-button *ngIf="isClearedRequest(row.portingRequestId) == false" (click)='raiseGrievanceButtonClicked(row.portingRequestId, row.insuredName)'>Raise
+          Grievance</button>
+
+
+
+      
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> 
+</div>

@@ -1,0 +1,36 @@
+<mat-dialog-content>
+  <div class="abc">
+    <div mat-dialog-actions style="border-bottom:blue;">
+        <button mat-button [mat-dialog-close]="true" style="width:auto;color:wheat;background-color: red; ">Close</button>
+    </div>
+    
+  <ng-container *ngFor="let message of (messages | async)" #scrollMe (scroll)="onScroll()">
+      
+    <div class="message"
+      [ngClass]="{
+        from: message.sentBy === 'bot',
+        to: message.sentBy === 'user'
+      }"
+    >
+      {{ message.content }}
+    </div>
+  </ng-container>
+</div>
+</mat-dialog-content>
+<br>
+<mat-dialog-action>
+<div class="bottom">
+  <label for="nameField" style="margin:0 auto;"> <h4>Your message</h4></label>
+
+  <div mat-dialog-actions style="justify-content: left">
+    <input [(ngModel)]="formValue"
+    (keyup.enter)="sendMessage()"
+    type="text">
+</div>
+<br>
+<div mat-dialog-actions style="justify-content: left">
+  <button mat-stroked-button (click)="sendMessage()" style="background-color:indigo;color: white">Send</button>
+  <button mat-stroked-button (click)="showResults()" style="margin-left:3%; background-color: yellow">Show Results</button>
+</div>
+</div>
+</mat-dialog-action>

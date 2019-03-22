@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <catalog>
+
+    <policy policyid="210">
+
+        <insuredName>kavya</insuredName>
+        <insurerName>Apollo Munich Health Insurance Company Limited</insurerName>
+        <policyName>Apollo Plan-2</policyName>
+        <diseases>Cancer</diseases>
+        <sumInsured>1000000</sumInsured>
+        <waitingPeriod>10</waitingPeriod>
+        <monthlyPremium>300</monthlyPremium>
+        <yearlyPremium>3600</yearlyPremium>
+
+    </policy>
+
+    <policy policyid="322">
+
+        <insuredName>kavya</insuredName>
+        <insurerName>Star Health and Allied insurance Co Ltd</insurerName>
+        <policyName>Star Plan-2</policyName>
+        <diseasesCovered>Cardiac</diseasesCovered>
+        <sumInsured>400000</sumInsured>
+        <waitingPeriod>9</waitingPeriod>
+        <monthlyPremium>500</monthlyPremium>
+        <yearlyPremium>6000</yearlyPremium>
+
+    </policy>
+
+    <policy policyid="801">
+
+        <insuredName>kavya</insuredName>
+        <insurerName>Bajaj Allianz General Insurance Co Ltd</insurerName>
+        <policyName>Bajaj Plan-2</policyName>
+        <diseasesCovered>Brain tumour</diseasesCovered>
+        <sumInsured>800000</sumInsured>
+        <waitingPeriod>8</waitingPeriod>
+        <monthlyPremium>700</monthlyPremium>
+        <yearlyPremium>8400</yearlyPremium>
+
+    </policy>
+
+</catalog>

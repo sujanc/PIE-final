@@ -1,0 +1,35 @@
+#add-button{
+   display: inline-block;
+  top: auto;
+  right: 60px;
+  bottom: 70px;
+  position: fixed;
+  left: auto;
+  width: 50px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 0;
+  border: 0;
+  background-size: 100%;
+}
+#add-button img{
+  display: inline-block;
+  height: 70px;  
+  width: 70px;
+  border-radius: 40px;
+} 
+#add-button2{
+  display: inline-block;
+ top: auto;
+ right: 60px;
+ bottom: 70px;
+ position: fixed;
+ right: auto;
+ width: 50px;
+ height: 40px;
+ border-radius: 30px;
+ padding: 0;
+ border: 0;
+ background-size: 100%;
+}
+

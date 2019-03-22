@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <catalog>
+
+    <policy policyId="107">
+
+        <insurerName>MaxBupa</insurerName>
+        <insurerLicense>MaxBupa</insurerLicense>
+        <policyName>MaxBupa Heartbeat Health Gold Plan-1</policyName>
+        <minAge>21</minAge>
+        <maxAge>67</maxAge>
+        <policyType>Family</policyType>
+        <genderAvail>Female</genderAvail>
+        <waitingPeriod>3</waitingPeriod>
+        <policyTerm>3</policyTerm>
+        <minSumInsured>300000</minSumInsured>
+        <maxSumInsured>900000</maxSumInsured>
+        <policyDescription>Get Health coverage for Family by availing Insured amount up to Rs.900000</policyDescription>
+
+    </policy>
+
+    <policy policyId="907">
+
+        <insurerName>MaxBupa</insurerName>
+        <insurerLicense>MaxBupa</insurerLicense>
+        <policyName>MaxBupa Heartbeat Health Gold Plan-2</policyName>
+        <minAge>30</minAge>
+        <maxAge>81</maxAge>
+        <policyType>Group</policyType>
+        <genderAvail>Male</genderAvail>
+        <waitingPeriod>6</waitingPeriod>
+        <policyTerm>7</policyTerm>
+        <minSumInsured>200000</minSumInsured>
+        <maxSumInsured>3000000</maxSumInsured>
+        <policyDescription>Get Health coverage for Group by availing Insured amount up to Rs.3000000</policyDescription>
+
+    </policy>
+
+    <policy policyId="707">
+
+        <insurerName>MaxBupa</insurerName>
+        <insurerLicense>MaxBupa</insurerLicense>
+        <policyName>MaxBupa Heartbeat Health Gold Plan-3</policyName>
+        <minAge>40</minAge>
+        <maxAge>70</maxAge>
+        <policyType>Group</policyType>
+        <genderAvail>Male</genderAvail>
+        <waitingPeriod>3</waitingPeriod>
+        <policyTerm>9</policyTerm>
+        <minSumInsured>500000</minSumInsured>
+        <maxSumInsured>2500000</maxSumInsured>
+        <policyDescription>Get Health coverage for Group by availing Insured amount up to Rs.2500000</policyDescription>
+
+    </policy>
+
+    <policy policyId="207">
+
+        <insurerName>MaxBupa</insurerName>
+        <insurerLicense>MaxBupa</insurerLicense>
+        <policyName>MaxBupa Heartbeat Health Gold Plan-4</policyName>
+        <minAge>30</minAge>
+        <maxAge>80</maxAge>
+        <policyType>Self</policyType>
+        <genderAvail>Female</genderAvail>
+        <waitingPeriod>2</waitingPeriod>
+        <policyTerm>4</policyTerm>
+        <minSumInsured>250000</minSumInsured>
+        <maxSumInsured>1500000</maxSumInsured>
+        <policyDescription>Get Health coverage for Self by availing Insured amount up to Rs.1500000</policyDescription>
+
+    </policy>
+
+</catalog>

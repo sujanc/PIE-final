@@ -1,0 +1,40 @@
+
+
+.contact{
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+    .ce_hyperlink.grey a, .button-block.grey a, p.back.grey a {
+        color: #141312;
+        background: #e3e2e2;
+        text-transform: uppercase;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        padding: 10px 18px;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+   

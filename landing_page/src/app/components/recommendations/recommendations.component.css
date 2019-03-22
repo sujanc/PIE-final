@@ -1,0 +1,96 @@
+/* .panel-body{
+    background-color: #071142;
+} */
+
+/* p{
+    color: white;
+} */
+
+/* 
+.row {
+    transition: 1s transform;
+  }
+  .panel-default {
+    width: 80px;
+    height: 80px;
+    border: 1px solid blue;
+    background-color: skyblue;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: 1s transform;
+    transform-origin: top left;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .row:hover {
+    transform: translate3d(-40px, 0, 0);
+  }
+  
+  .panel-default:hover {
+    transform: scale(2);
+  }
+  
+  .panel-default:hover ~ .panel-default {
+    transform: translate3d(80px, 0, 0);
+  } */
+
+  /* .container{
+    background: url('/../assets/img/porting-a-health-policy.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+
+} */
+
+/* .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  } */
+
+  .example-card {
+    min-width: 100%;
+    margin: 40px;
+
+}
+.cards {
+    width: 400px;
+}
+
+ .container{
+    background: url('/../assets/img/dark.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+
+}
+
+
+
+@media  (max-width: 768px) {
+  .panel-body .card-img-top {
+     width: 180px;
+   }
+ }
+
+ .card-img-top {
+   width:280px;
+   height: 200px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+   .panel-body .card-img-top {
+
+   width: 180px;
+    }
+  }

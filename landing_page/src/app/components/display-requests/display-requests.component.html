@@ -1,0 +1,49 @@
+<div class="container" style="text-align:center;" *ngIf = info.token>
+  <div class="row" style="text-align:center;font-size : large">
+      <div class="col-md-12" style="font-size:18px; z-index:1;"></div>
+      <br />
+    </div>
+    <div class="row" style="text-align:center;font-size : large">
+            <div *ngFor="let count of requests" class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background: #FAEFD2"> Policy Name: {{count.newInsurerProduct}}</div>
+          <div class="panel-body" >
+               <!-- <ul class="list-group list-group-flush"> -->
+            <div *ngIf="(count.fromApproval ==0) && (count.toApproval ==0)">
+              
+              <p>Status : Pending</p>
+           </div>
+           <div *ngIf="(count.fromApproval ==1) && (count.toApproval ==0)">
+              <p>Status : Approved by existing insurer</p>
+           </div>
+
+           <div *ngIf="(count.fromApproval ==1) && (count.toApproval ==1)">
+              <p>Status : Porting completed</p>
+           </div>
+           <div *ngIf="(count.fromApproval ==1) && (count.toApproval ==2)">
+              <p>Status :Porting Rejected</p>
+           </div>
+            <!-- <li class="list-group-item">Request Id: {{count.portingRequestId}}</li>
+            <li class="list-group-item">New Policy Name: {{count.newInsurerProduct}}</li>     -->
+          <!-- </ul>  -->
+            <p>Request Id: {{count.portingRequestId}}</p>
+          </div>    
+        </div>
+        <br/>
+      </div>
+    </div>
+  </div>
+<!-- <app-footer></app-footer> -->
+<!-- <router-outlet></router-outlet> -->
+
+  <!-- <div>
+    <ul *ngFor = "let count of requests ">
+      <li>
+        {{count.insuredName}}
+      </li>
+      <li>{{track.name}}</li>
+      <li>{{track.comment}}</li>
+     <a [routerLink]="['/deleteTrack', track.id]" class="btn btn-primary">Delete</a>
+      <a [routerLink]="['/updateTrack', track.id,track.comment]" class="btn btn-primary">Update</a>
+    </ul>
+  </div> -->

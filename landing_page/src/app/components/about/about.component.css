@@ -1,0 +1,19 @@
+
+h1{
+    color:grey;
+    height:60px;
+    /* font-size:5rem; */
+    margin-left: 10rem;
+}
+
+p{
+    color: black;
+    text-align: justify;
+    margin-left: 10rem;
+    margin-right: 10rem;
+     font-size: 1.8rem; 
+}
+
+.about{
+    background-color: #f7f7f7;
+}

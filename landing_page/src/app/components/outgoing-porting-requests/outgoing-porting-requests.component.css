@@ -1,0 +1,100 @@
+/* .mypolicy {
+    padding-left: 11em;
+} */
+
+
+.card{
+    background-color: aqua;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    size: auto;
+}
+
+p{
+    margin:0px;
+}
+
+.card-header {
+     padding: 0; 
+     margin-bottom: 0;
+     background-color: #f7f7f9; 
+     border-bottom: 0;
+} 
+
+.marked-complete-text {
+    color: greenyellow;
+}
+.marked-not-complete-text {
+    color: red;
+}
+table {
+    width: 100%;
+    height: 50%;
+}
+.tableSection {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.matTable {
+    width: 40em;
+    overflow: scroll;
+    
+}
+
+.mat-header-cell{
+  align-content: center;
+  background-color: blue;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.mat-cell {
+    text-align: center;
+    padding: 2%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: large;
+}
+.mat-cell-green {
+  /* border: none; */
+  border-top: 2px green;
+  border-bottom: 2px green;
+  text-align: center;
+  padding: 2%;
+}
+.mat-cell-red {
+  /* border: none; */
+  border-top: 2px red;
+  border-top: 2px red;
+  text-align: center;
+  padding: 2%;
+}
+
+.mat-checkbox {
+    text-align: center;
+}
+.highlight-green {
+    background-color: lightgreen;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.highlight-red {
+    background-color: red;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.highlight-red-row {
+    border: 25px;
+    border-color: red;
+}
+button {
+    background-color: blue;
+    color: white;
+}
+
+
+.mat-row:nth-child(odd){
+    background-color:white;
+    }

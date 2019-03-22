@@ -1,0 +1,151 @@
+<!-- <mat-tab-group style = "margin-left: 18%;" mat-align-tabs="center">
+  <mat-tab label="Outline">
+      <form [formGroup]="firstForm">
+    <mat-form-field  style = "margin-left: 20%;">
+    <input  matInput placeholder="Insurer Name" formControlName="insurerName">
+  </mat-form-field>
+  <br>
+  <mat-form-field  style = "margin-left: 20%;">
+    <input matInput placeholder="Policy Name" formControlName="policyName">
+  </mat-form-field>
+  <br>
+   <mat-form-field style = "margin-left: 20%;">
+    <input matInput placeholder="PolicyId" formControlName="policyId">
+  </mat-form-field>
+      </form>
+  </mat-tab>
+  <mat-tab label="Intended Customers">
+      <form [formGroup]="secondForm">
+        <mat-form-field style = "margin-left: 42%;">
+          <input matInput placeholder="Min Age" formControlName="minAge">
+        </mat-form-field>
+        <br>
+        <mat-form-field style = "margin-left: 42%;">
+          <input matInput placeholder="Max Age" formControlName="maxAge">
+        </mat-form-field>
+        <br>
+         <mat-form-field style = "margin-left: 42%;">
+          <input matInput placeholder="Waiting Period" formControlName="waitingPeriod">
+        </mat-form-field>
+   </form>
+  </mat-tab>
+  <mat-tab label="Cost Details">
+      <form [formGroup]="thirdForm">
+  <mat-form-field style = "margin-left: 59%;">
+    <input matInput placeholder="Min Sum Insured" formControlName="minSumInsured">
+  </mat-form-field>
+  <br>
+  <mat-form-field style = "margin-left: 59%;">
+    <input matInput placeholder="Max Sum Insured" formControlName="maxSumInsured">
+  </mat-form-field>
+  <br>
+
+   <mat-form-field style = "margin-left: 59%;">
+    <input matInput placeholder="No Of CashLess Hospitals" formControlName="hospitals">
+  </mat-form-field>
+  </form>
+<br>
+<br>
+<div style = "margin-left: 60%;">
+    <button class="btn btn-success btn-outline-rounded" (click)="onSubmit()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+</div>
+
+  </mat-tab>
+
+</mat-tab-group>
+<router-outlet></router-outlet> -->
+       
+<!-- <app-insurer-dashboard></app-insurer-dashboard> -->
+<!-- <br/>
+<br/> -->
+
+<div class="xyz" *ngIf = info.token>
+<mat-tab-group style = "margin-left: 18%;" mat-align-tabs="center">
+  <mat-tab label="Outline">
+            <form [formGroup]="firstForm">
+    <mat-form-field  style = "margin-left: 20%;">
+    <input  matInput placeholder="Insurer Name" formControlName="insurerName">
+  </mat-form-field>
+  <br>
+  <mat-form-field  style = "margin-left: 20%;">
+    <input  matInput placeholder="Insurer License" formControlName="insurerLicense">
+  </mat-form-field>
+  <br>
+  <mat-form-field  style = "margin-left: 20%;">
+    <input matInput placeholder="Policy Name" formControlName="policyName">
+  </mat-form-field>
+  <br>
+   <mat-form-field style = "margin-left: 20%;">
+    <input matInput placeholder="Policy Id" formControlName="policyId">
+  </mat-form-field>
+      </form>
+  </mat-tab>  
+  <mat-tab label="Intended Customers">
+      <form [formGroup]="secondForm">
+          <mat-form-field style="margin-left:40%">
+              <mat-select placeholder="Policy Type" formControlName="policyType">
+                <mat-option value="Individual">Individual</mat-option>
+                <mat-option value="Family">Family</mat-option>
+                <mat-option value="Group">Group</mat-option>
+              </mat-select>
+            </mat-form-field>
+         
+            <mat-form-field style="margin-left:40%">
+                <mat-select placeholder="Gender Avail" formControlName="genderAvail">
+                  <mat-option value="Male">male</mat-option>
+                  <mat-option value="Female">female</mat-option>
+                  <mat-option value="Female">both</mat-option>
+                </mat-select>
+              </mat-form-field>
+        <mat-form-field style = "margin-left: 40%;">
+          <input matInput placeholder="Min Age" formControlName="minAge">
+        </mat-form-field>
+        <br>
+        <mat-form-field style = "margin-left: 40%;">
+          <input textarea matInput placeholder="Diseases Covered" formControlName="diseasesCovered">
+        </mat-form-field>
+        <br>
+        <mat-form-field style = "margin-left: 40%;">
+          <input matInput placeholder="Max Age" formControlName="maxAge">
+        </mat-form-field>
+        <br>
+   </form>
+  </mat-tab>
+  <mat-tab label="Cost Details">
+      <form [formGroup]="thirdForm">
+          <mat-form-field style = "margin-left: 59%;">
+              <input matInput placeholder="Policy Term" formControlName="policyTerm">
+            </mat-form-field>
+            <br>
+         
+  <mat-form-field style = "margin-left: 59%;">
+    <input matInput placeholder="Min Sum Insured" formControlName="minSumInsured">
+  </mat-form-field>
+  <br>
+  <mat-form-field style = "margin-left: 59%;">
+    <input matInput placeholder="Max Sum Insured" formControlName="maxSumInsured">
+  </mat-form-field>
+  <br>
+  <mat-form-field style = "margin-left: 59%;">
+      <input matInput placeholder="Waiting Period" formControlName="waitingPeriod">
+    </mat-form-field>
+    <br>
+  <mat-form-field style = "margin-left: 59%;">
+      <input matInput placeholder="Policy Description" formControlName="policyDescription">
+    </mat-form-field>
+    <br>
+    <mat-form-field style = "margin-left: 59%;">
+      <input matInput placeholder="Policy image Url" formControlName="imageUrl">
+    </mat-form-field>
+    <br>
+  </form>
+<br>
+<br>
+<div style = "margin-left: 60%;">
+    <button class="btn btn-success btn-outline-rounded" (click)="onSubmit()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+</div>
+  </mat-tab>
+
+</mat-tab-group>
+</div>
+<router-outlet></router-outlet>

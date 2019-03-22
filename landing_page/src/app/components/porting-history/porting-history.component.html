@@ -1,0 +1,45 @@
+
+
+
+<div *ngIf = info.token>
+
+<div class="container" style="text-align:center; margin-left: 0%;">
+    <div class="row" style="text-align:center">
+      <div class="col-md-12" style="font-size:18px"></div>
+      <br /><br /><br /><br />
+    </div>
+    <div class="row" style="text-align:center;font-size : 16px;">
+      <div *ngFor="let item of requests" class="col-md-4">
+        <div class="panel panel-default">
+
+          <div class="panel-body">
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">RequestId: {{ item.portingRequestId }}</li>
+              <li class="list-group-item">Reason For Portability: {{item.reasonForPortability}}</li>
+              <li class="list-group-item">Insured Name: {{item.insuredName}}</li>
+              <li class="list-group-item">Old Insurer Name: {{item.insurerName}}</li>
+              <div *ngIf="(item.fromApproval ==0) && (item.toApproval ==0)">
+                  <li class="list-group-item">Status : Pending from existing insurer</li>
+               </div>
+               <div *ngIf="(item.fromApproval ==1) && (item.toApproval ==0)">
+                  <li class="list-group-item">Status : Approved by existing insurer</li>
+               </div>
+               <div *ngIf="(item.fromApproval ==1) && (item.toApproval ==1)">
+                  <li class="list-group-item">Status : Porting completed</li>
+               </div>
+               <div *ngIf="(item.fromApproval ==1) && (item.toApproval ==2)">
+                  <li class="list-group-item">Status :Porting Rejected</li>
+               </div>
+              <li class="list-group-item">New Insurer Name: {{item.newInsurerName}}</li>
+            </ul>
+           
+
+              
+              </div>
+        </div>
+        <br/>
+      </div>
+    </div>
+  </div>
+</div>

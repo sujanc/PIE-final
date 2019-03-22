@@ -1,0 +1,62 @@
+<div *ngIf = info.token>
+
+<div class ="xyz">
+<mat-tab-group style = "margin-left: 0%;" mat-align-tabs="center">
+  <mat-tab label="First">
+      <form [formGroup]="firstForm">
+    <mat-form-field  style = "margin-left: 28%;">
+    <input  matInput placeholder="Username" formControlName="username">
+  </mat-form-field>
+  <br>
+  <mat-form-field  style = "margin-left: 28%;">
+    <input matInput placeholder="Email" formControlName="email">
+  </mat-form-field>
+  <br>
+   <mat-form-field style = "margin-left: 28%;">
+    <input matInput type = "password" placeholder="Password" formControlName="password">
+  </mat-form-field>
+      </form>
+  </mat-tab>
+  <mat-tab label="Second">
+      <form [formGroup]="secondForm">
+    <mat-form-field style = "margin-left: 45%;">
+    <input matInput placeholder="Gender" formControlName="gender">
+  </mat-form-field>
+  <br>
+  <mat-form-field style = "margin-left: 45%;">
+      <input matInput placeholder="Existing Disease" formControlName="existingDisease">
+    </mat-form-field>
+    <br>
+  <mat-form-field style = "margin-left: 45%;">
+    <input matInput placeholder="Age" formControlName="age">
+  </mat-form-field>
+
+   </form>
+   
+  <!-- </mat-tab>
+  <mat-tab label="Family Details">
+    <form [formGroup]="thirdForm">
+  <mat-form-field  style = "margin-left: 65%;">
+  <input  matInput placeholder="Member name" formControlName="memberName">
+</mat-form-field>
+<br>
+<mat-form-field  style = "margin-left: 65%;">
+  <input matInput placeholder="Age" formControlName="memberAge">
+</mat-form-field>
+<br>
+ <mat-form-field style = "margin-left: 65%;">
+  <input matInput placeholder="Gender" formControlName="memberGender">
+</mat-form-field>
+<mat-form-field style = "margin-left: 65%;">
+  <input matInput placeholder="Relation" formControlName="relation">
+</mat-form-field>
+    </form> -->
+   <div style = "margin-left: 60%; margin-bottom: 20%;">
+      <button class="btn btn-success btn-outline-rounded" (click)="submitForm()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+   </div>
+   </mat-tab>
+  
+
+ </mat-tab-group>
+ </div>
+ </div>

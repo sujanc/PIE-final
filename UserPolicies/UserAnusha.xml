@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalog>
+
+    <policy policyid="10">
+
+        <insuredName>Anusha</insuredName>
+        <insurerName>Apollo Munich Health Insurance Company Limited</insurerName>
+        <policyName>Apollo Plan-1</policyName>
+        <diseasesCovered>Cancer</diseasesCovered>
+        <sumInsured>6000000</sumInsured>
+        <waitingPeriod>6</waitingPeriod>
+        <monthlyPremium>800</monthlyPremium>
+        <yearlyPremium>9600</yearlyPremium>
+
+    </policy>
+
+    <policy policyid="22">
+
+        <insuredName>Anusha</insuredName>
+        <insurerName>Star Health and Allied insurance Co Ltd</insurerName>
+        <policyName>Star Plan-2</policyName>
+        <diseasesCovered>Cardiac</diseasesCovered>
+        <sumInsured>900000</sumInsured>
+        <waitingPeriod>2</waitingPeriod>
+        <monthlyPremium>1000</monthlyPremium>
+        <yearlyPremium>12000</yearlyPremium>
+
+    </policy>
+
+    <policy policyid="80">
+
+        <insuredName>Anusha</insuredName>
+        <insurerName>Bajaj Allianz General Insurance Co Ltd</insurerName>
+        <policyName>Bajaj Plan-2</policyName>
+        <diseasesCovered>Brain tumour</diseasesCovered>
+        <sumInsured>100000</sumInsured>
+        <waitingPeriod>4</waitingPeriod>
+        <monthlyPremium>300</monthlyPremium>
+        <yearlyPremium>3600</yearlyPremium>
+
+    </policy>
+
+</catalog>

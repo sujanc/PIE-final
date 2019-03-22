@@ -1,0 +1,356 @@
+version: "2.1"
+services:
+
+  mysqldb:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: springbootdb
+      MYSQL_PASSWORD: root
+      MYSQL_USER: root
+    ports:
+      - 3306:3306
+    network_mode: host
+    hostname: localhost
+    volumes:
+      - /DB/mysql:/var/lib/mysql
+    healthcheck:
+      test: "exit 0"
+
+  mongo:
+    image: mongo:3.4-jessie
+    restart: always
+    ports:
+      - 27017:27017
+    network_mode: host
+    expose:
+      - 27017
+    hostname: localhost
+    volumes:
+      - /DB/mongo:/data/db
+    healthcheck:
+      test: "exit 0"
+
+  apigateway:
+    image: zuul-service
+    build: zuul-gatewayservice/
+    restart: always
+    network_mode: host
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+    ports:
+      - 8092:8092
+    expose:
+      - 8092
+    healthcheck:
+      test: "exit 0"
+
+  eurekaserver:
+    image: eureka-service:latest
+    build: eureka-server/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    ports:
+      - 8071:8071
+    expose:
+      - 8071
+    healthcheck:
+      test: "exit 0"
+
+  configserver:
+    image: config-servcie:latest
+    build: config-server/
+    restart: always
+    network_mode: host
+    ports:
+      - 8888:8888
+    expose:
+      - 8888
+    healthcheck:
+      test: "exit 0"
+
+  userreg:
+    image: userreg-service
+    build: userreg/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8093:8093
+    expose:
+      - 8093
+    healthcheck:
+      test: "exit 0"
+
+  kafka:
+    image: landoop/fast-data-dev:latest
+    ports:
+      - 2181:2181
+      - 3030:3030
+      - 9092:9092
+      - 8081:8081
+      - 8082:8082
+      - 8083:8083
+    container_name: kafka_docker
+    network_mode: host
+    hostname: localhost
+    restart: always
+    volumes:
+      - /home/ubuntu/deployment/KafkaDocker:/data/kafka
+    healthcheck:
+      test: "exit 0"
+  
+  recommendations:
+    image: recommendation-service:latest
+    build: recommendations/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      apigateway:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8086:8086
+    expose:
+      - 8086
+    healthcheck:
+      test: "exit 0"
+
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - 7474:7474
+      - 7687:7687
+    container_name: neo4j_docker
+    network_mode: host
+    hostname: localhost
+    restart: always
+    volumes:
+      - /DB/neo4j/data:/data
+    environment:
+      - NEO4J_AUTH=neo4j/pass
+    healthcheck:
+      test: "exit 0"
+
+  pie-admin-service:
+    image: pie-admin-service:1.0.0
+    restart: always
+    build: admin/
+    ports:
+      - 8055:8055
+    network_mode: host
+
+  commonauth:
+    image: commonauth
+    build: commonauth/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8096:8096
+    expose:
+      - 8096
+    healthcheck:
+      test: "exit 0"
+
+  insurerregservice:
+    image: insurerregservice
+    build: insurerregservice/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      mongo:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8090:8090
+    expose:
+      - 8090
+    healthcheck:
+      test: "exit 0"
+
+  chatbot:
+    image: chatbot
+    build: ChatBot Service/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8070:8070
+    expose:
+      - 8070
+    healthcheck:
+      test: "exit 0"
+
+  searchservice:
+    image: search-service
+    build: search-service/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8095:8095
+    expose:
+      - 8095
+    healthcheck:
+      test: "exit 0"
+
+  porting:
+    image: porting
+    build: porting/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      mongo:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8091:8091
+    expose:
+      - 8091
+    healthcheck:
+      test: "exit 0"
+
+  externalinsurerdbservice:
+    image: externalinsurerdbservice
+    build: ExternalInsurerDbService/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      mongo:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+    ports:
+      - 8094:8094
+    expose:
+      - 8094
+    healthcheck:
+      test: "exit 0"
+
+  policy:
+    image: policy
+    build: policy/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    depends_on:
+      mongo:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+      apigateway:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    ports:
+      - 8097:8097
+    expose:
+      - 8097
+    healthcheck:
+      test: "exit 0"
+
+  landing:
+    image: landing
+    build: landing_page/
+    restart: always
+    network_mode: host
+    hostname: localhost
+    ports:
+      - 8063:8063
+    expose:
+      - 8063
+    healthcheck:
+      test: "exit 0"
+
+  settlement:
+    image: settlement:1.0.0
+    restart: always
+    build: settlement/
+    ports:
+      - 8073:8073
+    network_mode: host
+
+  email:
+    image: email:latest
+    restart: always
+    build: email/
+    ports:
+      - 8055:8055
+    network_mode: host

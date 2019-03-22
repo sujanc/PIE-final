@@ -1,0 +1,72 @@
+<ul>
+  <li *ngFor="let pendingTask of pendingTasks">
+    {{ pendingTask.insuredName }}
+    <button (click)="viewPendingTasksOfInsured(pendingTask.insuredName)">
+      View Details
+    </button>
+    <div
+      *ngIf="
+        viewPendingTasksOfInsuredIsClicked &&
+        pendingTask.insuredName === currentInsuredName
+      "
+    >
+      <tr>
+        <td>Task Name</td>
+        <td>Task Description</td>
+        <td>Status</td>
+        <td>Due Date</td>
+      </tr>
+      <tr *ngFor="let task of pendingTask.taskList" class="taskstable">
+        <td>{{ task.taskName }}</td>
+        <td>{{ task.taskDescription }}</td>
+        <td *ngIf="task.taskStatus" class="marked-complete-text">Completed</td>
+        <td *ngIf="!task.taskStatus" class="marked-not-complete-text">Not Completed</td>
+        <td>{{ task.dueDate }}</td>
+        <td *ngIf="!task.taskStatus">
+          <button
+            (click)="
+              modifyStatusOfTask(
+                task.taskStatus,
+                task.taskName,
+                pendingTask.pendingTasksId
+              )
+            "
+          >
+            Mark As Completed
+          </button>
+        </td>
+        <td *ngIf="task.taskStatus">
+          <button
+            (click)="
+              modifyStatusOfTask(
+                !task.taskStatus,
+                taskName,
+                pendingTask.pendingTasksId
+              )
+            "
+          >
+            Mark As Not Completed
+          </button>
+        </td>
+      </tr>
+      <button (click)="addANewPendingTask()">Add a new Task</button>
+      <div
+        *ngIf="
+          viewPendingTasksOfInsuredIsClicked &&
+          addANewPendingTaskIsClicked &&
+          pendingTask.insuredName === currentInsuredName
+        "
+      >
+        <div>
+          <input placeholder="Task Name" [(ngModel)]="newPendingTaskName" />
+          <input
+            placeholder="Task Description"
+            [(ngModel)]="newPendingTaskDescription"
+          />
+          <input placeholder="Due Date" [(ngModel)]="newPendingTaskDueDate" />
+        </div>
+        <button (click)="saveNewPendingTask(pendingTask)">Save</button>
+      </div>
+    </div>
+  </li>
+</ul>

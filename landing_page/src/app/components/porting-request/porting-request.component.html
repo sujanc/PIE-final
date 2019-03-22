@@ -1,0 +1,40 @@
+<div *ngIf = info.token>
+
+ <div class="xyz">  <input type="text" placeholder="Insured Name" style="font-size:15px;"  value="{{insuredName}}" required/><br><br>
+ <label style="margin-left: 5%;">Existing policy name:</label><br>
+<select placeholder="Existing Policy Name" style="font-size:15px;" [(ngModel)]="insurerProd"(change) = "reach(insurerProd)"> 
+    <option *ngFor="let policyy of policies" value="{{policyy.policyName}}">{{policyy.policyName}}</option>
+ </select> 
+
+ <div *ngIf = "flag" style="font-size:15px;">
+     <input type="text" placeholder="Existing insurer" [(ngModel)] = "anusha.insurerName" readonly required/>
+     <input type="text" placeholder="Existing sum insured"  [(ngModel)] = "anusha.maxSumInsured" readonly required/>
+     <input type="text" placeholder="Existing PolicyNumber" [(ngModel)] = "anusha.policyId" readonly required/>
+ </div>
+ <input type="text" style="font-size:15px;" placeholder="Add-Ons" [(ngModel)] = "addon" required/><br><br>
+
+ <label style="margin-left: 5%;">New Policy name:</label><br>
+ <select placeholder="New Policy Name" style="font-size:15px;" [(ngModel)] = "newInsurerProd" (change) = "reach1(newInsurerProd)">
+        <option *ngFor="let policyy1 of newpolicies" value="{{policyy1.policyName}}">{{policyy1.policyName}}</option>
+ </select>
+<div *ngIf="flag1" style="font-size:15px;">
+        <input type="text" placeholder="New Insurer" [(ngModel)] = "policy1.insurerName" readonly required/>
+        <input type="text" placeholder="New Sum insured"  [(ngModel)] = "policy1.maxSumInsured" readonly required/>
+        <input type="text" placeholder="New PolicyNumber" [(ngModel)] = "policy1.policyId" readonly required/>
+</div>
+<input type="text" placeholder="Reason for portability" style="font-size:15px;" [(ngModel)] = "reason" required/>
+ <input type="text" placeholder="No of family members" style="font-size:15px;"[(ngModel)] = "familyMem" required/>
+ <label style="margin-left: 5%; font-size:15px;">Is PED exclusion period longer than the existing policy period?</label><br>
+ <!-- <input type="text" style="font-size:15px;" [(ngModel)] = "exclusion" required/><br><br> -->
+ <input type="radio" style="margin-left: 5%;font-size:15px;" value="true" name="exclusion" [(ngModel)]="exclusion" required > 
+ <label style="margin-left: 5%;font-size:15px;">True</label> <br>
+ <input type="radio" style="margin-left: 5%;font-size:15px;" value="false" name="exclusion" [(ngModel)]="exclusion" required > 
+ <label style="margin-left: 5%;font-size:15px;">False</label> 
+ <div style = "margin-left: 50%; margin-bottom:20%;">
+     <button class="btn btn-success btn-outline-rounded" style="font-size:15px;" (click)="submitForm(insuredName,insurerProd,anusha.insurerName,anusha.maxSumInsured,addon,anusha.policyId,newInsurerProd,policy1.insurerName,policy1.maxSumInsured,reason,familyMem,exclusion)"> Submit <span style="margin-left:10px;"></span></button>
+ </div>
+ 
+</div>
+
+
+ </div>

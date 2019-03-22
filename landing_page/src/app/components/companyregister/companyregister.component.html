@@ -1,0 +1,71 @@
+<div class="xyz">
+
+<mat-tab-group style = "margin-left: 0%;" mat-align-tabs="center">
+  <mat-tab label="Authentication Details">
+      <form [formGroup]="firstForm">
+    <mat-form-field  style = "margin-left: 37%;">
+    <input  matInput placeholder="InsurerName" formControlName="insurerName" required>
+    <mat-error *ngIf="isFieldInvalid('insurerName')">
+      InsurerName is required
+ </mat-error> 
+  </mat-form-field>
+  <br>
+  <mat-form-field  style = "margin-left: 37%;">
+    <input matInput placeholder="InsurerLicense" formControlName="insurerLicense" required>
+    <mat-error *ngIf="isFieldInvalid('insurerName')">
+      InsurerLicense is required
+ </mat-error> 
+  </mat-form-field>
+  <br>
+  <mat-form-field  style = "margin-left: 37%;">
+  <input matInput placeholder="email" formControlName="insurerEmail" required>
+  <mat-error *ngIf="isFieldInvalid('insurerName')">
+    Email is required
+</mat-error>
+</mat-form-field>
+<br>
+<mat-form-field style = "margin-left: 37%;">
+  <input type="password" matInput  placeholder="Password" formControlName="password" required>
+  <!-- type="password" -->
+  <mat-error *ngIf="isFieldInvalid('insurerName')">
+    Password must be atleast 6 character long
+</mat-error>
+</mat-form-field>
+<br>
+ </form>
+  </mat-tab>
+  <mat-tab label="Insurer Details">
+      <form [formGroup]="secondForm">
+    <mat-form-field style = "margin-left: 50%;">
+      <input matInput placeholder="insurerAddress" formControlName="insurerAddress" required>
+      <mat-error *ngIf="isFieldInvalid('insurerName')">
+        Insurer Address is required
+   </mat-error>
+    </mat-form-field>
+    <br>
+ 
+    <mat-form-field style="margin-left: 50%;">
+      <mat-select placeholder="Security Question">
+        <mat-option value="option">What is your favourite food?</mat-option>
+        <mat-option value="option">What is your favourite pet?</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br/>
+    <mat-form-field style="margin-left: 50%;">
+      <input
+        matInput
+        placeholder="Security Answer"
+        formControlName="securityAnswer"
+      />
+      <mat-error *ngIf="isFieldInvalid('insurerName')">
+          Security Answer is required
+     </mat-error>
+    </mat-form-field>
+   </form>
+   <div style = "margin-left: 60%;">
+      <button class="btn btn-success btn-outline-rounded" (click)="submitForm()"> Submit <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+   </div>
+  </mat-tab>
+ 
+ </mat-tab-group>
+ </div>

@@ -1,0 +1,84 @@
+<!-- <div id="generaltreams-section" class="tab-pane fade">
+  <div class="row rowflex">
+    <div class="col-md-12 col-sm-12 nopaddingleft custombtmpdng custom-tab-contant"> -->
+        <div class="xyzq">
+
+      <mat-dialog-content style="overflow-y: auto;">
+
+            <h3>
+              General <span class="noboldtxt">Terms</span>
+            </h3> 
+            <p>This policy is on floater basis.<br>
+            Family : Proposer, spouse, dependent children from 16 days up to 25 years (those who are economically dependent on their parents)</p>
+            <p>&nbsp;</p>
+            <h3>
+                <span class="noboldtxt">
+              Benefits
+            </span>
+            </h3>
+            
+            <p>  Amount paid by any mode other than by cash for  this insurance is eligible for relief under Section 80D of the Income Tax Act.</p>
+            <p>&nbsp;</p>
+          
+           <h3>
+                <span class="noboldtxt">
+              Free Look Period
+            </span>
+            </h3>
+            
+            <p>  A free look period of 15 days from the date of  receipt of the policy is available for reviewing the policy terms and  conditions. In case insured is not satisfied he can seek cancellation of the  policy and in such event the Company will allow refund of premium after  adjusting the cost of pre- acceptance of medical screening, stamp duty charges  and proportionate risk premium for the period concerned provided no claim has  been made until such cancellation. Free look&nbsp;cancellation is not  applicable at the time of renewal.</p>
+            <p>&nbsp;</p>
+          
+            <h3>
+                <span class="noboldtxt">
+                    Guaranteed Lifetime Renewals
+            </span>
+            </h3>
+            
+            <p>Life-long  renewals beyond 65 years are offered under this policy.</p>
+            <p>&nbsp;</p>
+          
+            <h3>
+                <span class="noboldtxt">
+                    Co-Payment:
+            </span>
+            </h3>
+           <p>20% of each and every claim for persons above 60 years at entry level and their subsequent renewals.</p>
+            <p>&nbsp;</p>
+            <h3>
+                <span class="noboldtxt">
+                    Pre-Acceptance Medical Screening:
+            </span>
+            </h3>
+          
+            <p>Persons above 50 years will be required to undergo pre-acceptance medical screening at the Company nominated centres. Cost of screening is currently borne by the company.</p>
+            <p>&nbsp;</p>
+          
+            <h3>
+                <span class="noboldtxt">
+                    Pre-Existing Diseases/Illness: :
+            </span>
+            </h3>
+            <p> Are covered after 48 months of continuous Insurance without break with any Indian Insurance Company.</p>
+            <p>&nbsp;</p>
+          
+            <h3>
+                <span class="noboldtxt">
+          Note:  </span>
+            </h3>
+            <p> Renewal  premium, terms and conditions are subject to change with prior approval from IRDAI.</p>
+      <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/><p>I agree to the terms and conditions</p>
+      <div *ngIf="marked">
+          <div *ngIf="!(info.token)">
+              <a [routerLink] = "['/guestUser']" class ="btn btn-primary" class ="btn btn-primary" style ="margin-right: 5%;margin-left: 44%; margin-bottom: 2%; font-size: 15px;"> Buy </a>
+          </div>
+           <div *ngIf="info.token">
+             <a [routerLink] = "['/buyPolicy']" class ="btn btn-primary" style ="margin-right: 5%;margin-left: 44%; margin-bottom: 2%;"> Buy </a>
+        </div>
+      </div>
+  </mat-dialog-content>
+</div>
+
+        <!-- <button class="btn btn-primary" (click)="openDialog(policy1.policyName,policy1.insurerName)"
+            style="margin-right: 5%;margin-left: 20%; margin-bottom: 2%;">Buy</button> -->
+     

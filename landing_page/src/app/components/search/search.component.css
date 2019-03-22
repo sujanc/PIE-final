@@ -1,0 +1,214 @@
+ .card-text {
+font-size: 20px;
+}
+
+.top-plans {
+    background: #f7f7f7;
+}
+
+.top-plans .top-plans-container {
+    padding: 50px 0px;
+    clear: both;
+}
+
+.top-plans .top-plans-container .title {
+    font-family: worksans_medium;
+    font-size: 28px;
+    text-align: center;
+    color: #333333;
+}
+
+.top-plans .top-plans-container .plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+.top-plans .top-plans-container .plans-container .plan-wrap {
+    width: calc(50% - 15px);
+    border-radius: 4px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(194, 194, 194, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.plan-wrap{
+    flex-direction: column;
+
+}
+.top-plans-container .plans-container .plan-wrap .plan-content > ul li:before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 1em;
+    height: 1em;
+    background: transparent url(/../assets/img/tick.png) center no-repeat;
+    background-size: contain;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .bg {
+    width: 40%;
+    /* min-height: 360px; */
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content {
+    padding: 20px 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    width: 60%;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content .plan-tag {
+    font-family: worksans_regular;
+    font-size: 14px;
+    line-height: 1em;
+    margin-bottom: 4px;
+    color: #ffcc00;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content .plan-title {
+    font-family: worksans_medium;
+    font-size: 20px;
+    line-height: 1em;
+    color: #0095a5;
+    margin-bottom: 16px;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content > ul {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin-bottom: 18px;
+    list-style: none;
+    flex-grow: 1;
+}
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content > ul li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content > ul li {
+    padding-left: 1.7em;
+    position: relative;
+    font-size: 12px;
+    color: #666666;
+    line-height: 1em;
+}
+
+ul li {
+    list-style: none;
+}
+
+ .top-plans .top-plans-container .plans-container .plan-wrap .plan-content > ul li > span {
+    font-size: 1.1em;
+    color: #333333;
+}
+
+/* .top-plans .top-plans-container .plans-container .plan-wrap .plan-content .btn-wrap {
+    height: 92px;
+} */
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content .btn-wrap .btn {
+    display: block;
+    padding: 12px !important;
+    font-size: 14px;
+    line-height: 1em;
+    background-color: #fff;
+    color: #f97408;
+    border: 1px solid #f97408;
+    border-radius: 4px !important;
+    outline: none;
+    box-shadow: none !important;
+    text-decoration: none;
+    text-transform: uppercase !important;
+}
+
+.top-plans .top-plans-container .plans-container .plan-wrap .plan-content .btn-wrap {
+    height: 92px;
+}
+
+.container2 {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.container .row .panel-default .panel-body .card-img-top > ul li:before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 1em;
+    height: 1em;
+    background: transparent url(/../assets/img/tick.png) center no-repeat;
+    background-size: contain;
+
+}
+
+
+
+@media  (max-width: 768px) {
+   .panel-body .card-img-top {
+      width: 180px;
+    }
+  }
+
+  .card-img-top {
+    width:260px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+    .panel-body .card-img-top {
+
+    width: 180px;
+     }
+   }
+.col-md-4{
+    height: 527px;
+}
+
+
+ .row{
+        margin-right: 0%;
+        margin-left:0%;
+    }
+    
+  .container {
+      overflow: hidden;
+  }
+
+
+
+#add-button2{
+    display: inline-block;
+   top: auto;
+   right: 60px;
+   bottom: 70px;
+   position: fixed;
+   left: auto;
+   width: 50px;
+   height: 40px;
+   border-radius: 30px;
+   padding: 0;
+   border: 0;
+   background-size: 100%;
+   z-index: inherit;
+  }
+  
+  #add-button2 img{
+    display: inline-block;
+    height: inherit;
+    width: 40px;
+    border-radius: 40px;
+  } 

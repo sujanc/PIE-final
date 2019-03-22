@@ -1,0 +1,14 @@
+
+
+
+<div style="width:200px; margin:0 right ; margin-bottom:20%;">
+  <div mat-dialog-actions>
+      <button mat-button [mat-dialog-close]="true" style="width:auto;color:wheat;background-color: red;position: relative">Close</button>
+  </div>
+<p style="margin-right:0">Are you sure you want to delete?</p>
+  <div class = "card"> 
+    <div class = "card-header"></div>
+
+<a (click) = "deletePop(insurerName, policyName)"
+            class="btn btn-primary" style ="margin-right: 0%;margin-left: 0%; margin-bottom: 2%;" onClick="window.location.reload();"
+            >Delete</a>

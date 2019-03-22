@@ -1,0 +1,12 @@
+<button (click)="createNewForm()">Add new form</button>
+<div *ngIf="displayNewFormClicked">
+  <input placeholder="Name for new Form" [(ngModel)]="newFormName"/>
+  <ul>
+    <li *ngFor="let field of newForm.fields">{{ field }}</li>
+  </ul>
+  <input [(ngModel)]="newField" placeholder="New Field" />
+  <div *ngIf="displayNewFormClicked">
+    <button (click)="addNewField()">Add New Field</button>
+    <button (click)="saveForm()">Save Form</button>
+  </div>
+</div>

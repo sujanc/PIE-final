@@ -1,0 +1,94 @@
+
+<!-- <app-insurer-dashboard></app-insurer-dashboard>
+<br>
+<br>
+<br>
+<app-side-bar></app-side-bar> -->
+<!-- <div *ngFor = "let request of requests">
+{{ request.portingRequestId }}
+{{ request.insuredName }}
+{{ request.newInsurerName }}
+<button class = "btn btn-primary" (click)="port(request)">Accept IncPR</button>
+<button class = "btn btn-primary" (click)="port1(request)">Reject IncPR</button>
+  </div> -->
+
+  <!-- <div class="mypolicy">
+      <div *ngFor = "let request of requests">
+  
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Request ID</th>
+          <th>User Name</th>
+          <th>Old Insurer Name</th>
+           <th>Sum Insured</th>
+          
+          <th>Action</th> 
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>{{ request.portingRequestId }}</td>
+            <td>{{ request.insuredName }}</td>
+            <td>{{ request.newInsurerName }}</td>
+           <button mat-raised-button (click)="openDialog(request.insuredName)" style="position: relative; right: 0;margin-top: 0px;">Review</button> 
+            <button class = "btn btn-primary" (click)="openDialog(request.insuredName)" style="position: relative; right: 0;margin-top: 0px;">Review</button>
+           <br>
+            <button class = "btn btn-primary" (click)="port(request)">Accept</button>
+           <br>
+            <button class = "btn btn-primary">Reject</button>
+  
+</tr> 
+
+</tbody>
+<tfoot>
+    <tr>
+      <td colspan="5" class="text-center">
+        <div st-pagination="" st-items-by-page="itemsByPage"></div>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+</div> 
+</div>
+<br/>
+<br/>
+<br/>   -->
+<div *ngIf = info.token>
+
+ <table mat-table [dataSource]="requests" matSort>
+  <ng-container matColumnDef="requestID">
+    <th mat-header-cell *matHeaderCellDef> Request ID</th>
+    <td mat-cell *matCellDef="let row"> {{row.portingRequestId}} </td>
+  </ng-container>
+  <ng-container matColumnDef="userName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+    <td mat-cell *matCellDef="let row"> {{row.insuredName}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="oldInsurerName">
+    <th mat-header-cell *matHeaderCellDef> Old insurer Name </th>
+    <td mat-cell *matCellDef="let row">
+      {{row.newInsurerName}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="modifyStatusButton">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let row">
+     
+        <button mat-stroked-button (click)="openDialog(row.insuredName)">Review</button>
+        <br><br>
+        <button mat-stroked-button (click)="port(row)">Accept</button>
+        <br><br>
+        <button mat-stroked-button (click)="port1(row)">Reject</button>
+
+
+
+      
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> 
+
+</div>

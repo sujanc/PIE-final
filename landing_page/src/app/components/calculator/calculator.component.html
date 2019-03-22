@@ -1,0 +1,131 @@
+        
+        
+        <div style="width:200px; margin:0 right ; margin-bottom:20%;">
+          <div mat-dialog-actions>
+              <button mat-button [mat-dialog-close]="true" style="width:auto;color:wheat;background-color: red;position: relative">Close</button>
+          </div>
+        <h2 style="margin-right:0">Premium<br>Calculator</h2>
+          <div class = "card"> 
+            <div class = "card-header"></div>
+
+    <form [formGroup]="firstForm" style="font-size:small;">
+      <mat-form-field style="margin-left: 10%;">
+        <input matInput placeholder="Name" formControlName="userName" />
+      </mat-form-field>
+
+      <mat-form-field style="margin-left:10%">
+        <mat-select placeholder="City" formControlName="city">
+          <mat-option value="Anantapur">Anantapur</mat-option>
+          <mat-option value="Bangalore">Bangalore</mat-option>
+          <mat-option value="Chikmagalur">Chikmagalur</mat-option>
+          <mat-option value="Chikmagalur">Delhi</mat-option>
+          <mat-option value="Mumbai">Mumbai</mat-option>
+          <mat-option value="Chennai">Chennai</mat-option>
+          <mat-option value="Punjab">Punjab</mat-option>
+          <mat-option value="Kolkata">Kolkata</mat-option>
+          <mat-option value="Jaipur">Jaipur</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field style="margin-left:10%">
+        <mat-select placeholder="Policy Name" formControlName="policyName">
+          <mat-option value="Apollo-cancer">Apollo-cancer</mat-option>
+          <mat-option value="MaxBupa-cancer">MaxBupa-cancer</mat-option>
+          <mat-option value="StarHealth-cancer">StarHealth-cancer</mat-option>
+          <mat-option value="Apollo-children">Apollo-children</mat-option>
+          <mat-option value="MaxBupa-children">MaxBupa-children</mat-option>
+          <mat-option value="StarHealth-children"
+            >StarHealth-children</mat-option
+          >
+          <mat-option value="Apollo-Family">Apollo-Family</mat-option>
+          <mat-option value="MaxBupa-Family">MaxBupa-Family</mat-option>
+          <mat-option value="StarHealth-Family">StarHealth-Family</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field style="margin-left:10%">
+        <mat-select placeholder="Sum Insured" formControlName="sumInsured">
+          <mat-option value="100000">100000</mat-option>
+          <mat-option value="200000">200000</mat-option>
+          <mat-option value="300000">300000</mat-option>
+          <mat-option value="400000">400000</mat-option>
+          <mat-option value="500000">500000</mat-option>
+          <mat-option value="600000">600000</mat-option>
+          <mat-option value="700000">700000</mat-option>
+          <mat-option value="800000">800000</mat-option>
+          <mat-option value="900000">900000</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+
+      <mat-form-field style="margin-left:10%">
+        <mat-select placeholder="No Of Adults" formControlName="noOfAdults">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+          <mat-option value="6">6</mat-option>
+          <mat-option value="7">7</mat-option>
+          <mat-option value="8">8</mat-option>
+          <mat-option value="9">9</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field style="margin-left: 10%;">
+        <input
+          matInput
+          placeholder="Age Of Eldest"
+          formControlName="ageOfEldest"
+        />
+      </mat-form-field>
+
+      <mat-form-field style="margin-left:10%">
+        <mat-select placeholder="No Of Children" formControlName="noOfChildren">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+          <mat-option value="6">6</mat-option>
+          <mat-option value="7">7</mat-option>
+          <mat-option value="8">8</mat-option>
+          <mat-option value="9">9</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field style="margin-left:10%">
+        <mat-select placeholder="Policy Term" formControlName="noOfYears">
+          <mat-option value="1">1 year</mat-option>
+          <mat-option value="2">2 years</mat-option>
+          <mat-option value="3">3 years</mat-option>
+          <mat-option value="4">4 years</mat-option>
+          <mat-option value="5">5 years</mat-option>
+          <mat-option value="6">6 years</mat-option>
+          <mat-option value="7">7 years</mat-option>
+          <mat-option value="8">8 years</mat-option>
+          <mat-option value="9">9 years</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div style="margin-left: 60%;">
+        <button
+          class="btn btn-success btn-outline-rounded"
+          (click)="submitForm()"
+        >
+          Submit
+          <span
+            style="margin-left:10px;"
+            class="glyphicon glyphicon-arrow-right"
+          ></span>
+        </button>
+      </div>
+      <div class="pull-center" *ngIf="flag">
+        <p style="font-family:'Gill Sans'; color:blue; font-size: large;">PREMIUM</p>
+        <button class="btn btn-primary">
+          {{ premium }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

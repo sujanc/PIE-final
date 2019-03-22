@@ -1,0 +1,58 @@
+td {
+    border: 1px solid black;
+}
+.marked-complete-text {
+    color: greenyellow;
+}
+.marked-not-complete-text {
+    color: red;
+}
+table {
+    width: 100%;
+    height: 50%;
+}
+.tableSection {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.matTable {
+    width: 100%;
+    /* width: 40em; */
+    overflow: scroll;
+}
+
+.mat-header-cell{
+  text-align: center;
+  background-color: blue;
+  border: none;
+  color: white;
+}
+
+.mat-cell {
+  border: none;
+  text-align: center;
+  padding: 2%;
+}
+
+.mat-checkbox {
+    text-align: center;
+}
+.no-highlight {
+    background-color: white;
+}
+.red-highlight {
+    background-color: #e54e4e;
+    font-weight: bold;
+}
+button {
+    background-color: blue;
+    color: white;
+}
+.mat-cell-completed {
+    color: black;
+}
+.mat-cell-not-completed {
+    color: white;
+}

@@ -1,0 +1,163 @@
+/* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-android {
+  background: orange;
+  color: white;
+}
+
+ .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper i {
+    padding: 10px;
+    text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+    transition: all ease-in-out 150ms;
+  }
+  .wrapper a:nth-child(1) {
+    color: #dd4b39;
+  }
+  .wrapper a:nth-child(2) {
+    color: #4867AA;
+  }
+  .wrapper a:nth-child(3) {
+    color: red;
+  }
+  .wrapper a:nth-child(4) {
+    color: #1DA1F2;
+  }
+  .wrapper a:nth-child(5) {
+    color:maroon;
+  }
+  .wrapper i:hover {
+    margin-top: -3px;
+    text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+  }
+  ul li a{
+      text-decoration: none;
+}
+
+footerl {
+    background-color: black;
+    color: white;
+} 
+footer{
+  overflow: auto;
+  margin-top: auto;
+}
+
+.list{
+  color:white;
+}
+
+@media screen and (max-width:475px){
+    footer{
+      height: 20%;
+      width: 100%;
+    }
+    .divmargin{
+      margin-bottom: 20%;
+    }
+}
+ 
+
+  /* #main-footer{
+    background: #263f26;
+    color: white;
+    padding: 6rem 0;
+    font-size:0.8rem;
+}
+
+#main-footer h6{
+    color:#718fa9;
+}
+
+#main-footer a{
+    color: #6c5f73;
+} */
+
+
+/* #footer-main{
+  background: #222;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2.5rem 0;
+}
+
+
+.list{
+  font-size: 20px;
+}
+.links{
+  font-size: 20px;
+}
+.linkslist{
+  font-size: 20px;
+
+}
+
+.linslist{
+  font-size: 20px;
+}  */
+
+.stylish-color-dark {
+  background-color: #3E4551;
+}
+
+.font-weight-bold-1{
+  font-family: "Magra";
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.head{
+  color:white;
+}
+
+.head:p{
+  font-size: 2rem;
+  font-family: "Magra";
+}
+
+.font-weight-bold{
+  font-family: "Magra";
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.font-weight-bold-2{
+  font-family: "Magra";
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+}
+
+.register{
+  font-family: "Magra";
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+
+}
+
+.linkslist{
+  font-size: 35px;
+
+}
+p{
+  font-size: 15px;
+}

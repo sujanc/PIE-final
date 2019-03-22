@@ -1,0 +1,73 @@
+ <div class="container" style="text-align:center; margin-left: 2.5%;">
+  <div class="row" style="text-align:center">
+    <div class="col-md-12" style="font-size:18px"></div>
+    <br /><br /><br /><br />
+  </div>
+  <div class="row" style="text-align:center;font-size : 16px;">
+    <div *ngFor="let policy1 of policies" class="col-md-4">
+      <div class="panel panel-default">
+          <div class="panel-heading">Policy Name: {{ policy1.policyName | uppercase}}</div>
+
+        <div class="panel-body">
+            <img class="card-img-top" src='{{policy1.imageUrl}}' alt="Card image cap">
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span>Age-Group:</span> {{ policy1.minAge }} - {{ policy1.maxAge }}</li>
+            <li class="list-group-item">
+              <span>Sum Insured:</span> {{ policy1.minSumInsured }} -{{ policy1.maxSumInsured }} </li>
+
+
+
+            <li class="list-group-item" id ="diseases">
+              Diseases Covered:
+                <div *ngFor="let disease of policy1.diseasesCovered">
+                    <li style="margin-left:5%;"> {{ disease }},</li>
+            </div>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-footer">
+          <a
+          [routerLink] = "['/policyDetails', policy1.insurerName, policy1.policyName]"
+          class="btn btn-primary" style ="margin-right: 0%;margin-left: 0%; margin-bottom: 2%;font-size: 15px;" onClick="window.location.reload();"
+          >Read more</a>
+      <button class="btn btn-primary" (click)="openDialog(policy1.insurerName,policy1.policyName)" style="margin-right: 5%;margin-left: 20%; margin-bottom: 2%; font-size: 15px;">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+
+<button id="add-button2" (click)="openDialog3()"><img src=".././assets/img/calci2.jpeg"></button>
+
+
+<!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <mat-card class="card-picture" *ngFor="let policy1 of policies">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+      <span fxFlex="80%">{{ policy1.policyName }}</span>
+    </mat-card-title>
+    <img mat-card-image [src]= "policy1.imageUrl">
+  </mat-card>
+</div> -->
+<!-- 
+<div class="container" fxLayout="row"  fxLayoutGap="20px" fxLayoutAlign="center">
+
+<mat-card class="example-card" *ngFor="let policy1 of policies">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ policy1.policyName }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]= "policy1.imageUrl">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card> -->

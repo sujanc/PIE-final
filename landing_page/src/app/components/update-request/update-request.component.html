@@ -1,0 +1,53 @@
+<!-- <app-dashboard></app-dashboard> -->
+<form [formGroup]="portingForm">
+    <mat-form-field  style = "margin-left: 28%;">
+    <input  matInput placeholder="Insured Name" formControlName="insuredName" required/>
+  </mat-form-field>
+  <mat-form-field  style = "margin-left: 28%;">
+    <input matInput placeholder="Date of Birth" formControlName="dateOfBirth" required/>
+  </mat-form-field>
+  <br>
+   <mat-form-field style = "margin-left: 28%;">
+    <input matInput placeholder="Address" formControlName="insuredAddress" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="Existing policy name" formControlName="insurerProduct" required/>
+    </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="Existing sum insured" formControlName="sumInsured" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="Existing Cumulative Bonus" formControlName="cumulativeBonus" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="Add-ons" formControlName="addOns" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="Existing Policy Number" formControlName="policyNumber" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="New Policy Name" formControlName="newInsurerProduct" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="New Sum Insured" formControlName="newSumInsured" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="New Cumulative Bonus" formControlName="newCumulativeBonus" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;">
+      <input matInput placeholder="Reason for Portability" formControlName="reasonForPortability" required/>
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;margin-bottom: 10%;">
+      <input matInput placeholder="No. of Family Members" formControlName="familyMembers">
+  </mat-form-field>
+  <mat-form-field style = "margin-left: 28%;margin-bottom: 10%;">
+    <label>Whether the PED exclusion period is longer than the existing policy period</label>
+      <input matInput formControlName="exclusionPeriod" required/>
+  </mat-form-field>
+  <div style = "margin-left: 50%; margin-bottom:20%;">
+      <button class="btn btn-success btn-outline-rounded" (click)="submitForm()"> Submit <span style="margin-left:10px;"></span></button>
+  </div>
+ </form>
+ <!-- <app-footer></app-footer>
+ <router-outlet></router-outlet> -->
+ 

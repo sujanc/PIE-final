@@ -1,0 +1,316 @@
+
+
+/* body, html {
+    height: 100%;
+  } */
+/*   
+  * {
+    box-sizing: border-box;
+  } */
+  
+  /* .bg-img {
+    background-image: url("/../assets/img/4.jpeg");
+  
+    min-height: 380px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  }
+  
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  } */
+
+  /* body:before{
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/../assets/img/4.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+.contact-form
+{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 500px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,1,0,.5);
+}
+.avatar {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: calc(-80px/2);
+    left: calc(50% - 40px);
+}
+.contact-form h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact-form p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+.contact-form input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.contact-form input[type="submit"] {
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    background: red;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 15%;
+}
+.contact-form a
+{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+input[type="checkbox"] {
+    width: 20%;
+} */
+
+/* @media only screen and (max-width: 320px){
+.container {
+    top: 50px;
+}
+}
+
+@media screen and (max-width: 320px){
+.body-content {
+    margin: 100px 0 0 0;
+}
+}
+
+/* .container{
+    margin-top: 150px;
+} */
+/* #main_container {
+    width: 100%;
+    box-shadow: none;
+    margin-top: 100px;
+} */
+/* @media screen and (max-width: 1024px){
+.login_info {
+    display: none;
+}
+} */
+
+/* .login_info {
+    display: table-cell;
+    width: 45%;
+    background: #424242;
+    border-radius: 4px 0 0 4px;
+    padding: 50px 0;
+    position: relative;
+}
+.login_icon {
+    position: absolute;
+    /* background: url(../images/sprite.png) no-repeat -96px -359px; */
+    /* width: 101px;
+    height: 99px;
+    display: inline-block;
+    opacity: 0.2;
+    left: 151px;
+    top: 21px;
+} */
+/* .login_heading {
+    text-align: center;
+    font-size: 30px;
+    padding: 88px 0 18px 0;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    font-weight: 400;
+}
+
+.login_heading em {
+    font-weight: 300;
+    display: block;
+    font-size: 18px;
+    padding: 14px 0 0 0;
+}
+.login_subtext {
+    width: 100%;
+    padding: 6px 25px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul.subtext_data {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+ul.subtext_data li {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} */
+/* .arrow_div {
+    position: absolute;
+    /* background: url(../images/sprite.png) no-repeat -5px -365px; */
+    /* width: 64px;
+    height: 64px;
+    display: inline-block;
+    right: -27px;
+    top: 147px; */
+/* } */ 
+
+/* .login_container {
+    border-radius: 5px;
+    padding: 20px;
+}
+.login_container {
+    width: 100%;
+}
+.login_container {
+    background: #eeecf9;
+    border-radius: 0 4px 4px 0;
+    width: 55%;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    /* padding: 35px 0 35px 0; */
+/* } */
+/* .login_inner_box {
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+    box-sizing: border-box;
+} */
+/* ul.logininput {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+/* .login_proceed {
+    text-align: center;
+}  */ 
+
+
+/* .login-form {
+    width: 340px;
+    margin: auto;
+}
+.login-form form {
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+} */
+   .container {
+    background: url('/../assets/img/optima-restore-banner.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+   }
+ 
+   .panel-default {
+    opacity: 0.8;
+    margin-top:130px;
+    font-size: medium;
+   }
+   .form-group.last {
+    margin-bottom:0px;
+   }
+ 
+   .btn-sm {
+    padding: .25rem .5rem;
+    font-size: 1.575rem;
+    border-radius: .2rem;
+ }
+
+   

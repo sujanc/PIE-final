@@ -1,0 +1,24 @@
+.container {
+    background: url('/../assets/img/optima-restore-banner.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+   }
+ 
+   .panel-default {
+    opacity: 0.8;
+    margin-top:130px;
+    font-size: medium;
+   }
+   .form-group.last {
+    margin-bottom:0px;
+   }
+ 
+   .btn-sm {
+    padding: .25rem .5rem;
+    font-size: 1.575rem;
+    border-radius: .2rem;
+ }

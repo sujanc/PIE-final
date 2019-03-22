@@ -1,0 +1,406 @@
+<ng-template #loggedOut>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <nav class="navbar navbar-toggleable-md navbar-inverse navbar-dark bg-dark bg-inverse sticky-top" style="margin-bottom:0px"  *ngIf = "!info.token">
+    <button
+      class="navbar-toggler navbar-toggler-right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img
+        src="./../../assets/img/pie4.png"
+        alt="Logo"
+        class="img-responsive"
+        width="50px"
+        height="50px"
+      />
+    </a>
+
+    <div
+      style="font-size: 1.7rem; margin-right: 20px;"
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
+      <ul class="nav nav-tabs ml-auto">
+        <li class="nav-item active">
+          <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="['/about']" routerLinkActive="router-link-active"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/contact']" routerLinkActive="router-link-active"
+            >Contact</a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/login']"
+            ><span class="glyphicon glyphicon-user"></span> Log In</a
+          >
+        </li>
+      </ul>
+      <form class="form-inline" (ngSubmit)="search()">
+        <input
+          class="form-control"
+          type="search"
+          name="message"
+          style="font-size:15px;"
+          [(ngModel)]="message"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button
+          class="btn btn-outline-success my-2 my-sm-0"
+          type="submit"
+          style="font-size: 16px;display: inline;"
+        >
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </form>
+    </div>
+  </nav>
+</ng-template>
+
+
+<!-- <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse sticky-top" *ngIf="info.token;else loggedOut">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <a class="navbar-brand" href="#">
+      <img src="./../../assets/img/logo1.png" alt="Logo" class = "img-responsive" width = "50px" >
+  
+      </a>
+  
+    <div style ="font-size: 1.5rem; margin-right: 20px;" class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav nav-tabs ml-auto">
+                <li class="nav-item active"> 
+                  <a [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+  
+                </li>
+            
+              <li class="nav-item">
+              <a [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>            
+              </li>
+                <li class="nav-item">
+              <a [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>  
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="logout()">Logout</a>
+                  </li>
+          </ul>
+        <form class="form-inline" (ngSubmit) = "search()">
+          <input class="form-control" type="search" name="message" [(ngModel)]="message" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style = "font-size: 16px;display: inline;"><i class="glyphicon glyphicon-search"></i>Search</button>          
+        </form>
+    </div>
+   
+  </nav>     -->
+
+<mat-sidenav-container
+  class="container"
+  *ngIf="info.token && dashboard();"
+>
+  <mat-sidenav
+    #sidenav
+    [(mode)]="over"
+    [(opened)]="opened"
+    class="bottom-to-top"
+  >
+    <div
+      class="my-2"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+    >
+      <div class="with-bg"></div>
+      <div>
+        <a>
+          <img
+            class="circle"
+            src="./../../assets/img/profile1.jpg"
+            width="100"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      style="background-color: #071142 !important;"
+      class="mt-2 py-3 text-white"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="7px"
+    >
+      <div>
+        <a>
+          <span class="lead">{{ insuredName |uppercase }}</span>
+        </a>
+      </div>
+    </div>
+    <div class="mt-3">
+      <mat-nav-list>  
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/mypolicies', insuredName]"
+          routerLinkActive="active"
+          style="font-size:15px;"
+        >
+          My Policies
+        </a>
+        <mat-divider></mat-divider>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/recommendations', insuredName]"
+          routerLinkActive="active"
+          style="font-size:15px;"
+        >
+          Recommendations
+        </a>
+        <mat-divider></mat-divider>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/myrequests', insuredName]"
+          routerLinkActive="active"
+          style="font-size:15px;"
+        >
+          My Requests
+        </a>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+      <mat-accordion multi="true" [displayMode]="displayMode">
+          <mat-expansion-panel class="no-shadow">
+            <mat-expansion-panel-header
+              fxLayout="row"
+              [expandedHeight]="expandHeight"
+              [collapsedHeight]="collapseHeight"
+            >
+              <mat-panel-title>
+                My Profile
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list class="ml-0" dense>            
+              <a
+                mat-list-item
+                [routerLink]="['/myprofile', insuredName]"
+            routerLinkActive="active"
+            style="font-size:13px;"
+               >
+              Update profile</a
+              >
+              <mat-divider></mat-divider>
+              <a
+                mat-list-item
+                [routerLink]="['/familyMembers', insuredName]"
+            routerLinkActive="active"
+            style="font-size:13px;"
+              >Add Family Members</a
+              >
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-divider></mat-divider>
+        <mat-accordion multi="true" [displayMode]="displayMode">
+          <mat-expansion-panel class="no-shadow">
+            <mat-expansion-panel-header
+              fxLayout="row"
+              [expandedHeight]="expandHeight"
+              [collapsedHeight]="collapseHeight"
+            >
+              <mat-panel-title>
+                Porting Request
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list class="ml-0" dense>
+              <a
+                mat-list-item
+                [routerLink]="['/porting',insuredName]"
+            routerLinkActive="active"
+            style="font-size:13px;"
+               >
+                Apply  for porting request</a
+              >
+              <mat-divider></mat-divider>
+              <a
+                mat-list-item
+                href='https://economictimes.indiatimes.com/wealth/insure/all-you-need-to-know-about-porting-your-health-insurance-policy/articleshow/67393982.cms'
+                style="font-size:13px;"
+                >Help</a
+              >
+              <mat-divider></mat-divider>
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+     <mat-toolbar color="primary" class="header-box-shadow" *ngIf="info.token && dashboard()"  >
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        fxShow.sm="true"
+        fxShow.gt-sm="false"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <form class="form-inline" (ngSubmit)="search()">
+          <input
+            class="form-control"
+            type="search"
+            name="message"
+            [(ngModel)]="message"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+            style="font-size: 16px;display: inline;"
+          >
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </form>
+      <span class="spacer"></span>
+     
+      <mat-icon class="ml-3" title="Logout" (click)="logout()">exit_to_app</mat-icon>
+    </mat-toolbar> 
+    <button id="add-button2" (click)="openDialog()"><img src=".././assets/img/calci2.jpeg"></button>
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-sidenav-container
+  class="container"
+  *ngIf="info.token && idashboard(); else loggedOut;"
+>
+  <mat-sidenav
+    #sidenav
+    [(mode)]="over"
+    [(opened)]="opened"
+    class="bottom-to-top"
+  >
+    <div
+      class="my-2"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+    >
+      <div class="with-bg"></div>
+      <div>
+        <a>
+          <img
+            class="circle"
+            src="./../../assets/img/profile1.jpg"
+            width="100"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      style="background-color: #071142 !important;"
+      class="mt-2 py-3 text-white"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="7px"
+    >
+      <div>
+        <a>
+          <span class="lead">{{ insurerName |uppercase  }}</span>
+        </a>
+      </div>
+    </div>
+    <div class="mt-3">
+      <mat-nav-list>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/myCompanyPolicy', insurerName]"
+        routerLinkActive="active"
+          style="font-size:15px;"
+        >
+          My Policies
+        </a>
+        <mat-divider></mat-divider>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/incomingPortingRequest', insurerName]"
+          routerLinkActive="active"
+          style="font-size:15px;"
+        >
+         Incoming Porting Request
+        </a>
+        <mat-divider></mat-divider>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/outgoingPortingRequest', insurerName]"
+        routerLinkActive="active"
+          style="font-size:15px;"
+        >
+        Outgoing Porting Request
+      </a>
+      <mat-divider></mat-divider>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/newPolicyForm']"
+          routerLinkActive="active"
+          style="font-size:15px;"
+        >
+          Add New Policy
+        </a>
+        <mat-divider></mat-divider>
+        <a
+          mat-list-item
+          class="ml-2"
+          [routerLink]="['/requests', insurerName]"
+        routerLinkActive="active"
+          style="font-size:15px;"
+        >
+        Porting History
+      </a>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="header-box-shadow" *ngIf="info.token && idashboard(); else loggedOut;" >
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        fxShow.sm="true"
+        fxShow.gt-sm="false"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <mat-icon class="ml-3" title="Logout" (click)="logout()">exit_to_app</mat-icon>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
